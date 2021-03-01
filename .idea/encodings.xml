@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/data/csv/pappers/tel_c1486_r687.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data/csv/pappers/web_tel_c1486_r687.csv" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/data/csv/selenium/linkedin.csv" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/data/csv/selenium/live_res.csv" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/data/csv/selenium/live_res.csv.csv" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/data/csv/selenium/res_tel.csv" charset="windows-1252" />
+  </component>
+</project>
