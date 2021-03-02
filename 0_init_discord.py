@@ -11,6 +11,6 @@ async  def on_ready():
 async def on_message(message):
     if message.content.lower() == "ping":
         await message.channel.send('pong', delete_after=5)
-bot.run("ODAxMjEyMzA2NTExNzU3MzMy.YAdZGw.BGNTsQocuMSEsww7rCaBfeodmM0")
+bot.run(API)
 
 #https://www.integromat.com/scenario/1878842/edit
