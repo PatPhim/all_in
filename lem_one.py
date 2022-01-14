@@ -17,14 +17,14 @@ def extract(datodo):
     df_ope = df_ope.filter(
         items=['_id', 'type', 'createdAt', 'email', 'firstName', 'lastName', 'companyName', 'campaignName'])
 
-    cli = "https://api.lemlist.com/api/activities?user=2afc9a70208fdf6ac8c61db8c87da558&type=emailsClicked"
+    cli = "https://api.lemlist.com/api/activities?user=2afc9a70208fdf6ac8c61db8c87d&type=emailsClicked"
     r_cli = requests.request("GET", cli, headers=headers, data=payload)
     j_cli = r_cli.json()
     df_cli = pd.DataFrame(j_cli)
     df_cli = df_cli.filter(
         items=['_id', 'type', 'createdAt', 'email', 'firstName', 'lastName', 'companyName', 'campaignName'])
 
-    bou = "https://api.lemlist.com/api/activities?user=2afc9a70208fdf6ac8c61db8c87da558&type=emailsBounced"
+    bou = "https://api.lemlist.com/api/activities?user=2afc9a70208fdf6ac8c618&type=emailsBounced"
     r_bou = requests.request("GET", bou, headers=headers, data=payload)
     j_bou = r_bou.json()
     df_bou = pd.DataFrame(j_bou)
@@ -83,7 +83,7 @@ def extract(datodo):
 
         id_pipe,id_url = [],[]
         for g in df_res_g['email']:
-            api_email = f'https://api.pipedrive.com/v1/itemSearch?term={g}&start=0&api_token=a45355a6de79f4752db9de3053cbc7e663fbf1e5'
+            api_email = f'https://api.pipedrive.com/v1/itemSearch?term={g}&start=0&api_token=a45355a6de79f4752db9de3053cb63fbf1e5'
             r = requests.get(api_email)
             r.content
             j = r.json()
@@ -107,7 +107,7 @@ def extract(datodo):
                 label.append("")
                 pass
             elif f != "KO":
-                api_id = f'https://api.pipedrive.com/v1/persons/{f}?api_token=a45355a6de79f4752db9de3053cbc7e663fbf1e5'
+                api_id = f'https://api.pipedrive.com/v1/persons/{f}?api_token=a45355a6de79f4752db9c7e663fbf1e5'
                 r = requests.get(api_id)
                 r.content
                 j = r.json()
